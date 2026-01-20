@@ -10,11 +10,22 @@
 
 function continueGame(){
      // step -1: generate a random alphabet
-     
+     const alphabet = getARandomAlphabet();
+     console.log('your random alphabet', alphabet);
+    // set randomly generated alphabet to the screen (show it)
+    currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
+
+    // set background color
+    setBackgroundColorById(alphabet);
 }
 
 function play() {
      hideElementById('home-screen');  
      showElementById('play-ground');
      continueGame();
+}
+function setBackgroundColorById(elementId){
+  const element = document.getElementById(elementId);
+  element.classList.add('!bg-orange-400');
 }
