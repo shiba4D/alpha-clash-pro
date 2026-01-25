@@ -1,16 +1,51 @@
-function hideElementById(getElementById){
-   const element = document.getElementById(getElementById)
-   element.classList.add('hidden');            
+// hide any element by id
+function hideElementById(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.classList.add('hidden');
+  }
 }
 
-function showElementById(elementId){
-     const element = document.getElementById(elementId);
-     element.classList.remove('hidden');          
+// show any element by id
+function showElementById(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.classList.remove('hidden');
+  }
 }
 
-function setBackgroundColorById(elementId){
-               const element = document.getElementById(elementId);
-               element.classList.add('bg-orange-400');
+// add background color to an element
+function setBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.classList.add('bg-orange-400');
+  }
+}
+
+function removeBackgroundColorById(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.classList.remove('bg-orange-400');
+  }
+}
+
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
+
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
 }
 
 function getARandomAlphabet(){
